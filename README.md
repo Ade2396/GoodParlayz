@@ -1,68 +1,56 @@
-GoodParlayz — Sports Betting Dashboard
+# GoodParlayz
 
-GoodParlayz is a simple web application that lets users create an account, log in, manage profile information, save favorite teams, and create/delete parlay slips. 
+GoodParlayz is a sports betting style web application built with PHP that allows users to create an account, log in, manage their profile, add parlays, and save favorites through a simple dashboard interface.
 
-Features Implemented
-1. User Authentication
+This project was developed as part of COSC 459 (Database Design), with a focus on relational database design, user authentication, and PHP MySQL integration.
 
-Signup page (signup.php)
+## Tech Stack
+1. PHP
+2. HTML
+3. CSS
+4. JavaScript
+5. MySQL
+6. MAMP (local development)
 
-Login page (login.php)
+## Features
+1. User signup and login
+2. Dashboard after authentication
+3. Add parlay functionality
+4. Favorites page
+5. Profile viewing and updating
+6. Secure logout
 
-Session-based authentication
+## Project Structure
+1. login.html and login.php handle authentication
+2. signup.html and signup.php handle account creation
+3. dashboard.php serves as the main user hub
+4. add_parlay.php handles creating parlays
+5. favorites.php manages saved favorites
+6. profile.php, update_profile.php, and delete_profile.php handle user account management
+7. assets folder stores static assets
+8. style.css handles application styling
 
+## How to Run Locally (MAMP)
+1. Install MAMP
+2. Place the project folder in  
+   /Applications/MAMP/htdocs/GoodParlayz
+3. Start MAMP and run the servers
+4. Create a MySQL database
+5. Update database credentials in config.php
+6. Open the project using the MAMP localhost URL
 
-2. Dashboard / Homepage
+## Database Setup
+This repository does not include real database credentials.
 
-Displays user info after login
+To run locally:
+1. Create a MySQL database (example name: goodparlayz)
+2. Import your SQL schema
+3. Update config.php with your local database credentials
 
-Shows custom title and team logos
+## Notes
+1. config.php is ignored to prevent leaking credentials
+2. Screenshots will be added later
 
-Navigation links to profile, favorites, and parlay pages
+## Author
+Adedeji Ayokanmi
 
-3. Update Feature
-
-Edit Profile
-Users can update display name, email, or password from profile.php.
-
-4. Delete Feature
-
-Delete Parlay Slip
-Users can delete individual parlay entries.
-
-Delete Account 
-
-5. Additional Feature
-
-Favorite Teams System
-Users can add or remove favorite sports teams. Stored in the favorite_teams table.
-
-6. Parlay Slip Creation
-
-Users can add a new parlay with matchup and stake (odds removed by design).
-
-Preset matchups pull from the database `matchups`/`teams` tables when available (fallback list: Bulls vs Pistons, Eagles vs 49ers, Giants vs Cowboys, Heat vs Celtics, Lakers vs Warriors, Ravens vs Steelers).
-
-
-Features NOT Implemented
-
-No live sports API integration (scores, odds, real-time data)
-
-No full user settings page
-
-No parlay slip editing (only creating and deleting)
-
-Known Bugs / Limitations
-
-UI layout is basic and can shift on smaller screens.
-
-Password reset feature not included.
-
-Delete account (if included) is final with no warning.
-
-No password strength checking.
-
-
-Credits
-
-Team logos belong to their respective sports organizations.
